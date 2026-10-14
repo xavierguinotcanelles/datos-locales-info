@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>datos-locales</title>
+<meta name="description" content="Información pública de interés local de los municipios de la provincia de Castellón, con enlace a la fuente oficial y fecha. Informació pública d'interés local dels municipis de la província de Castelló.">
+<link rel="canonical" href="https://xavierguinotcanelles.github.io/datos-locales-info/">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --fg: #1f2328;
+    --muted: #57606a;
+    --accent: #0b5cad;
+    --rule: #d8dee4;
+    --code-bg: #eef1f4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15181c;
+      --fg: #e6e8eb;
+      --muted: #9aa4ae;
+      --accent: #6cb2ff;
+      --rule: #30363d;
+      --code-bg: #22272e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 2rem 1rem 3rem; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  h1 { font-size: 1.9rem; margin: 0 0 .25rem; letter-spacing: -.01em; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; }
+  .lede { color: var(--muted); margin: 0; }
+  nav { margin-top: .75rem; font-size: .95rem; }
+  a { color: var(--accent); }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: .9em; }
+  code { background: var(--code-bg); padding: .1em .3em; border-radius: 4px; overflow-wrap: anywhere; }
+  pre { background: var(--code-bg); padding: .75rem 1rem; border-radius: 6px; overflow-x: auto; }
+  pre code { background: none; padding: 0; }
+  ul { padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  section + section { border-top: 1px solid var(--rule); margin-top: 3rem; padding-top: 1rem; }
+  footer { color: var(--muted); font-size: .9rem; margin-top: 3rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>datos-locales</h1>
+  <p class="lede">Información pública de interés local de la provincia de Castellón · Informació pública d'interés local de la província de Castelló</p>
+  <nav><a href="#es" hreflang="es">Castellano</a> · <a href="#va" hreflang="ca-valencia">Valencià</a></nav>
+</header>
+
+<section id="es" lang="es">
+  <h2>Qué es</h2>
+  <p>datos-locales es un proyecto que reúne información pública de interés local de los 135 municipios de la provincia de Castellón: fiestas, mercadillos, farmacias de guardia, avisos y bandos, horarios y datos de contacto de servicios.</p>
+  <ul>
+    <li>Solo usa fuentes primarias públicas: webs de ayuntamientos, de la Diputación, de la Generalitat y boletines oficiales.</li>
+    <li>Cada dato va con el enlace a la página oficial de la que procede y la fecha en que se consultó.</li>
+    <li>No publica documentos ni copias de páginas: solo datos, con su enlace.</li>
+    <li>Filtra los datos de personas físicas.</li>
+  </ul>
+  <p>Hoy es un proyecto en preparación: no ofrece ningún servicio ni datos al público.</p>
+
+  <h2>Quién lo promueve</h2>
+  <p>Xavier Guinot Canelles, a título personal. Contacto: <a href="mailto:datoslocales.contacto@gmail.com">datoslocales.contacto@gmail.com</a>.</p>
+
+  <h2>El rastreador</h2>
+  <p>Para recoger la información, un programa visita páginas web públicas. Se identifica con este User-Agent:</p>
+  <pre><code>datos-locales/&lt;versión&gt; (+https://xavierguinotcanelles.github.io/datos-locales-info/; datoslocales.contacto@gmail.com)</code></pre>
+  <p>y responde al nombre <code>datos-locales</code> en <code>robots.txt</code>. Sus compromisos:</p>
+  <ul>
+    <li>Respeta <code>robots.txt</code>: lo que excluye no se pide, ni con otro nombre ni por otra vía.</li>
+    <li>Limita el ritmo de peticiones por dominio y respeta <code>Crawl-delay</code>.</li>
+    <li>Hace peticiones condicionales para no volver a descargar lo que no ha cambiado.</li>
+    <li>Solo visita páginas públicas: nada de formularios ni de zonas con acceso restringido.</li>
+    <li>Deja de rastrear un sitio cuando se lo pide quien lo mantiene.</li>
+  </ul>
+
+  <h2>Cómo pedir que deje de rastrear un sitio</h2>
+  <p>Basta con añadir estas líneas al <code>robots.txt</code> del sitio:</p>
+  <pre><code>User-agent: datos-locales
+Disallow: /</code></pre>
+  <p>También puede escribir a <a href="mailto:datoslocales.contacto@gmail.com">datoslocales.contacto@gmail.com</a> indicando el dominio: se dejará de rastrear y se le confirmará por correo. Para cualquier otra consulta, sugerencia o incidencia, el mismo correo.</p>
+</section>
+
+<section id="va" lang="ca-valencia">
+  <h2>Què és</h2>
+  <p>datos-locales és un projecte que reunix informació pública d'interés local dels 135 municipis de la província de Castelló: festes, mercats ambulants, farmàcies de guàrdia, avisos i bans, horaris i dades de contacte de serveis.</p>
+  <ul>
+    <li>Només utilitza fonts primàries públiques: webs d'ajuntaments, de la Diputació, de la Generalitat i butlletins oficials.</li>
+    <li>Cada dada va amb l'enllaç a la pàgina oficial d'on prové i la data en què es va consultar.</li>
+    <li>No publica documents ni còpies de pàgines: només dades, amb el seu enllaç.</li>
+    <li>Filtra les dades de persones físiques.</li>
+  </ul>
+  <p>Ara per ara és un projecte en preparació: no oferix cap servei ni dades al públic.</p>
+
+  <h2>Qui el promou</h2>
+  <p>Xavier Guinot Canelles, a títol personal. Contacte: <a href="mailto:datoslocales.contacto@gmail.com">datoslocales.contacto@gmail.com</a>.</p>
+
+  <h2>El rastrejador</h2>
+  <p>Per a recollir la informació, un programa visita pàgines web públiques. S'identifica amb este User-Agent:</p>
+  <pre><code>datos-locales/&lt;versió&gt; (+https://xavierguinotcanelles.github.io/datos-locales-info/; datoslocales.contacto@gmail.com)</code></pre>
+  <p>i respon al nom <code>datos-locales</code> en <code>robots.txt</code>. Els seus compromisos:</p>
+  <ul>
+    <li>Respecta <code>robots.txt</code>: el que exclou no es demana, ni amb un altre nom ni per una altra via.</li>
+    <li>Limita el ritme de peticions per domini i respecta <code>Crawl-delay</code>.</li>
+    <li>Fa peticions condicionals per a no tornar a baixar el que no ha canviat.</li>
+    <li>Només visita pàgines públiques: res de formularis ni de zones amb accés restringit.</li>
+    <li>Deixa de rastrejar un lloc quan ho demana qui el manté.</li>
+  </ul>
+
+  <h2>Com demanar que deixe de rastrejar un lloc</h2>
+  <p>N'hi ha prou amb afegir estes línies al <code>robots.txt</code> del lloc:</p>
+  <pre><code>User-agent: datos-locales
+Disallow: /</code></pre>
+  <p>També pot escriure a <a href="mailto:datoslocales.contacto@gmail.com">datoslocales.contacto@gmail.com</a> indicant el domini: es deixarà de rastrejar i se li confirmarà per correu. Per a qualsevol altra consulta, suggeriment o incidència, el mateix correu.</p>
+</section>
+
+<footer>
+  <p>datos-locales · <a href="mailto:datoslocales.contacto@gmail.com">datoslocales.contacto@gmail.com</a></p>
+</footer>
+</main>
+</body>
+</html>
